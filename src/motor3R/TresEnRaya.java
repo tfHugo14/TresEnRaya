@@ -12,4 +12,10 @@ public class TresEnRaya {
     public char[][] getTablero(){
         return tablero;
     }
+
+    public void jugar(int fila, int columa, char caracterJugador){
+        fila = fila-1;
+        columa = columa-1;
+        getTablero()[fila][columa] = caracterJugador;
+    }
 }
