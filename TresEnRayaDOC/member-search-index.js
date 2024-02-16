@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"motor3R","c":"TresEnRaya","l":"getTablero()"},{"p":"motor3R","c":"TresEnRaya","l":"TresEnRaya()","u":"%3Cinit%3E()"}];updateSearchResults();
