@@ -11,6 +11,7 @@ public class InterfaceConsola {
         String rojo = "\u001B[31m";
         String violeta = "\u001B[35m";
         String reset = "\u001B[0m";
+        String resultado = "Empate, tablero lleno";
 
         System.out.println(
                 "Bienvendo, esto es el juego del tres en raya!\n" +
@@ -36,9 +37,17 @@ public class InterfaceConsola {
                 if( !tresEnRaya.jugar(filaAMarcar, columnaAMarcar, caracterJugador) ){
                     System.out.println(rojo+"ERROR! en esa posición ya hay un caracter, por favor selecione otra posición."+reset);
                 }
+                if (tresEnRaya.hay3EnRaya(caracterJugador).equals("Jugador")){
+                    resultado = "Victoria del Jugador";
+                    break;
+                } else if (tresEnRaya.hay3EnRaya(caracterJugador).equals("Maquina")) {
+                    resultado = "Victoria de la Maquina";
+                    break;
+                }
             }
             System.out.println("###################################################");
-            System.out.println("# El juego ha terminado, el resultado es: "+violeta+"EMPATE!"+reset+" #");
+            System.out.println("      El juego ha terminado, el resultado es:      ");
+            System.out.println("               " +violeta+resultado+"!"+reset);
             System.out.println("###################################################");
             System.out.println("esta es la apariencia final del tablero:");
             ic.printTablero(tresEnRaya);
