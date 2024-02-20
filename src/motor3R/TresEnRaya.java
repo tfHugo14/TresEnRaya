@@ -23,8 +23,6 @@ public class TresEnRaya {
             return false;
         }
 
-
-
         char caracterMaquina;
         if (caracterJugador == 'x')
             caracterMaquina = 'o';
